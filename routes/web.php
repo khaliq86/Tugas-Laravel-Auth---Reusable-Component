@@ -30,3 +30,5 @@ Route::post('/project/update/{id}', [App\Http\Controllers\ProjectController::cla
 
 //User Route
 Route::get('/profile', [App\Http\Controllers\UserController::class, 'index'])->name('profile')->middleware('auth');
+Route::get('/profile/edit/{id}', [App\Http\Controllers\UserController::class, 'edit'])->name('editProfile')->middleware('auth');
+Route::post('/profile/update/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('updateProfile')->middleware('auth');

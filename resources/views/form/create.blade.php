@@ -68,6 +68,7 @@
             </form>
         </div>
     </div>
+    <a href="{{route('home')}}" class="btn btn-success">Back</a>
 </div>
 
 </div>

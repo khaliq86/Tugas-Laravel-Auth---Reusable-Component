@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Models\Category;
 use App\Models\Tag;
+use Auth;
 use Illuminate\Support\Facades\Validator;
 
 class ProjectController extends Controller
@@ -23,7 +24,8 @@ class ProjectController extends Controller
         $projects = Project::all();
         $tags = Tag::all();
         $categories = Category::all();
-        return view('form.create', compact('projects', 'tags', 'categories'));
+        $user = Auth::user();
+        return view('form.create', compact('projects', 'tags', 'categories', 'user'));
     }
 
     public function create()
@@ -75,7 +77,8 @@ class ProjectController extends Controller
         $selectedTags = $projects->id_tag;
         $categories = Category::all();
         $selectedCategories = $projects->id_category;
-        return view('form.edit', compact('projects', 'tags', 'categories', 'selectedTags', 'selectedCategories'));
+        $user = Auth::user();
+        return view('form.edit', compact('projects', 'tags', 'categories', 'selectedTags', 'selectedCategories', 'user'));
     }
 
     public function update(Request $request, $id)

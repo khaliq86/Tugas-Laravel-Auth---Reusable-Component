@@ -1,9 +1,9 @@
 <div class="content-wrapper">
     <div class="content-header">
         <div class="container-fluid">
-                <h1 class="m-0">Dashboard</h1>
+                <h1 class="m-0" style="font-size: 40px;">Dashboard</h1>
                 <div class="d-flex justify-content-end">
-                   <a href="{{route('create')}}" class="btn btn-sm bg-success"><i class="fas fa-plus fa-lg"></i></a>
+                   <a href="{{route('form')}}" class="btn bg-success">Add Project</a>
                 </div>
     <table class="table table-hover">
         <thead>

@@ -26,6 +26,6 @@
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css')}}">
   {{-- Profile --}}
-  <link rel="stylesheet" href="{{asset('assets/style.css')}}">
+  {{-- <link rel="stylesheet" href="{{asset('assets/style.css')}}"> --}}
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
