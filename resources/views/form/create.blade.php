@@ -60,6 +60,7 @@
                     <option selected>Pilih Status</option>
                     <option value="On Progress">On Progress</option>
                     <option value="Inactive">Inactive</option>
+                    <option value="Done">Done</option>
                     </select>
                 </div>
                 <div class="col-12 mt-2">

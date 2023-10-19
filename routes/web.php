@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +32,5 @@ Route::post('/project/update/{id}', [App\Http\Controllers\ProjectController::cla
 Route::get('/profile', [App\Http\Controllers\UserController::class, 'index'])->name('profile')->middleware('auth');
 Route::get('/profile/edit/{id}', [App\Http\Controllers\UserController::class, 'edit'])->name('editProfile')->middleware('auth');
 Route::post('/profile/update/{id}', [App\Http\Controllers\UserController::class, 'update'])->name('updateProfile')->middleware('auth');
+Route::get('/user', [AdminController::class, 'index'])->name('user')->middleware('auth');
+Route::get('/user/delete/{id}', [AdminController::class, 'userDelete'])->name('userDelete')->middleware('auth');

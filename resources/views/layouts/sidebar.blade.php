@@ -45,7 +45,14 @@
                 Dashboard
               </p>
             </a>
-
+            @if(Auth::user()->role == 'admin')
+            <a href="/user" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                User
+              </p>
+            </a>
+            @endif
             <a href="/logout" class="nav-link">
               <i class="nav-icon far fa-circle text-danger" id="logout"></i>
               <p class="text">Logout</p>

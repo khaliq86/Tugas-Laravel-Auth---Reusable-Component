@@ -57,6 +57,7 @@
                     <select id="status" class="form-select form-control" name="status">
                     <option value="On Progress" {{$projects->status == 'On Progress' ? 'selected' : ''}}>On Progress</option>
                     <option value="Inactive" {{$projects->status == 'Inactive' ? 'selected' : ''}}>Inactive</option>
+                    <option value="Done" {{$projects->status == 'Done' ? 'selected' : ''}}>Done</option>
                     </select>
                 </div>
                 <div class="col-12">
