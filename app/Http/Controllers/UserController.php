@@ -25,15 +25,15 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
 
-        $request->validate([
-            'image' => 'required|image|mimes:png,jpg,jpeg,svg|max:2048',
-        ]);
+        // $request->validate([
+        //     'image' => 'required|image|mimes:png,jpg,jpeg,svg',
+        // ]);
 
         $input = $request->all();
         $user = User::find($id);
-
         $user->name = $input['name'];
         $user->email = $input['email'];
+        $user->image = $input['image']->getClientOriginalName();
         $request->file('image')->storeAs('public/images', $user->image);
 
         $user->save();

@@ -18,7 +18,7 @@
           @endif
         </div>
         <div class="info">
-          <a href="/profile" class="d-block">{{$user->name}}</a>
+          <a href="/profile" class="d-block">{{ucfirst($user->name)}}</a>
         </div>
       </div>
 
